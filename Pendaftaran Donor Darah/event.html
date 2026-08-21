@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Event PMI - PMI Connect" />
+    <meta name="description" content="Daftar kegiatan resmi PMI termasuk donor darah, pelatihan P3K, simulasi bencana, Jumbara PMR, bakti sosial, dan penghargaan pendonor." />
+    <title>Event PMI Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="home.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-shield-heart"></i></span> PMI Connect</a>
+        <nav class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about-pmi.html">About</a>
+          <a class="active" href="event.html">Event</a>
+          <a href="saran.html">Saran</a>
+          <a href="contact.html">Kontak</a>
+          <a href="profile.html">Profile</a>
+          <a href="#" class="logout-link">Logout</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="icon-btn mobile-toggle" aria-label="Toggle nav"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding:40px 0 80px;">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Seluruh Event PMI</h2>
+        <p>Telusuri event resmi PMI dengan informasi lengkap, status, dan kuota.</p>
+      </div>
+      <div class="schedule-grid">
+        <article class="card schedule-card" data-aos="fade-up">
+          <div class="card-image" style="margin-bottom:18px; border-radius:24px; background: linear-gradient(135deg, rgba(193,18,31,0.1), rgba(255,107,107,0.18)); padding:28px; text-align:center;"><i class="fa-solid fa-droplet fa-2xl"></i></div>
+          <h3>Donor Darah</h3>
+          <p>Event utama PMI Connect yang menyediakan layanan donor darah terjadwal, aman, dan terverifikasi oleh PMI.</p>
+          <ul class="list-check">
+            <li><strong>Lokasi:</strong> RSUD Cibubur & Universitas Indonesia</li>
+            <li><strong>Tanggal:</strong> 19 Oktober 2026</li>
+            <li><strong>Status:</strong> Terbuka</li>
+            <li><strong>Kuota:</strong> 40 peserta</li>
+            <li><strong>Syarat:</strong> Usia 17-65 tahun, berat min 45 kg, kondisi sehat</li>
+            <li><strong>Fasilitas:</strong> pemeriksaan kesehatan, snack, sertifikat peserta</li>
+            <li><strong>Pendaftaran:</strong> isi formulir, tunggu konfirmasi, hadir sesuai jadwal</li>
+          </ul>
+          <div class="hero-actions" style="justify-content:flex-start; gap:10px; margin-top:12px;">
+            <a class="btn btn-primary" href="donor.html">Lihat Detail</a>
+            <a class="btn btn-outline" href="daftar.html">Daftar</a>
+          </div>
+        </article>
+        <article class="card schedule-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="card-image" style="margin-bottom:18px; border-radius:24px; background: linear-gradient(135deg, rgba(255,191,0,0.12), rgba(255,214,92,0.18)); padding:28px; text-align:center;"><i class="fa-solid fa-user-doctor fa-2xl"></i></div>
+          <h3>Pelatihan Pertolongan Pertama</h3>
+          <p>Pelatihan P3K untuk penanganan luka ringan, CPR dasar, dan tindakan awal sebelum tenaga medis tiba.</p>
+          <ul class="list-check">
+            <li><strong>Instruktur:</strong> Tim Medis PMI</li>
+            <li><strong>Lokasi:</strong> Aula PMI Jakarta</li>
+            <li><strong>Kuota:</strong> 60 peserta</li>
+            <li><strong>Durasi:</strong> 6 jam</li>
+            <li><strong>Benefit:</strong> Sertifikat, modul, snack</li>
+          </ul>
+          <a class="btn btn-primary" href="#">Daftar Pelatihan</a>
+        </article>
+        <article class="card schedule-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="card-image" style="margin-bottom:18px; border-radius:24px; background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(147,197,253,0.18)); padding:28px; text-align:center;"><i class="fa-solid fa-bolt-lightning fa-2xl"></i></div>
+          <h3>Simulasi Siaga Bencana</h3>
+          <p>Kegiatan simulasi gempa, banjir, kebakaran, dan evakuasi korban untuk kesiapsiagaan masyarakat.</p>
+          <ul class="list-check">
+            <li><strong>Jenis simulasi:</strong> Gempa & banjir</li>
+            <li><strong>Lokasi:</strong> Lapangan Serbaguna PMI</li>
+            <li><strong>Kuota:</strong> 80 peserta</li>
+          </ul>
+          <a class="btn btn-primary" href="#">Ikuti Simulasi</a>
+        </article>
+        <article class="card schedule-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="card-image" style="margin-bottom:18px; border-radius:24px; background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(110,231,183,0.18)); padding:28px; text-align:center;"><i class="fa-solid fa-hands-holding-child fa-2xl"></i></div>
+          <h3>Jumbara PMR</h3>
+          <p>Jumpa Bakti Gembira untuk anggota PMR dalam mengembangkan kepemimpinan dan jiwa kemanusiaan.</p>
+          <ul class="list-check">
+            <li><strong>Kategori:</strong> PMR</li>
+            <li><strong>Lokasi:</strong> Arena PMI Jawa Barat</li>
+            <li><strong>Tanggal:</strong> 15 November 2026</li>
+            <li><strong>Kuota:</strong> 120 peserta</li>
+          </ul>
+          <a class="btn btn-primary" href="#">Daftar Jumbara</a>
+        </article>
+        <article class="card schedule-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="card-image" style="margin-bottom:18px; border-radius:24px; background: linear-gradient(135deg, rgba(248,113,113,0.12), rgba(251,191,36,0.18)); padding:28px; text-align:center;"><i class="fa-solid fa-hand-holding-heart fa-2xl"></i></div>
+          <h3>Bakti Sosial PMI</h3>
+          <p>Pemeriksaan kesehatan gratis, pembagian sembako, bantuan sosial, dan pelayanan kesehatan keliling.</p>
+          <ul class="list-check">
+            <li><strong>Lokasi:</strong> Desa Mekar Sari</li>
+            <li><strong>Tanggal:</strong> 28 November 2026</li>
+            <li><strong>Target:</strong> Masyarakat kurang mampu</li>
+            <li><strong>Relawan:</strong> 100 orang</li>
+          </ul>
+          <a class="btn btn-primary" href="#">Ikut Menjadi Relawan</a>
+        </article>
+        <article class="card schedule-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-image" style="margin-bottom:18px; border-radius:24px; background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(165,180,252,0.18)); padding:28px; text-align:center;"><i class="fa-solid fa-award fa-2xl"></i></div>
+          <h3>Penghargaan Pendonor Darah</h3>
+          <p>Penghargaan bagi pendonor sukarela yang telah mendonorkan darah 10, 25, 50, 75, dan 100 kali.</p>
+          <ul class="list-check">
+            <li><strong>Tanggal:</strong> 20 Desember 2026</li>
+            <li><strong>Lokasi:</strong> Kantor Pusat PMI</li>
+            <li><strong>Kategori:</strong> Pendonor setia</li>
+          </ul>
+          <a class="btn btn-primary" href="#">Lihat Penghargaan</a>
+        </article>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/pmi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 80 });
+    </script>
+  </body>
+</html>

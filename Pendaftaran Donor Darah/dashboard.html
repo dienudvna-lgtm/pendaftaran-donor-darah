@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - BloodConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect</a>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="btn btn-secondary" id="logoutButton" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container dashboard-shell">
+      <aside class="sidebar glass">
+        <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect</a>
+        <nav>
+          <a class="active" href="dashboard.html">Dashboard</a>
+          <a href="daftar.html">Daftar Donor</a>
+          <a href="jadwal.html">Jadwal</a>
+          <a href="informasi.html">Informasi</a>
+        </nav>
+      </aside>
+      <section class="dashboard-main">
+        <div class="dashboard-card card">
+          <h2 id="profileName">Selamat datang</h2>
+          <p id="profileEmail">Dashboard donor Anda.</p>
+          <div class="chip" id="profileStatus" style="margin-top:10px;">Status: Menunggu</div>
+        </div>
+        <div class="profile-grid">
+          <div class="dashboard-card card">
+            <h3>Profil Ringkas</h3>
+            <p>Nama: <strong id="profileNameDetail">Pendonor</strong></p>
+            <p>Status pendaftaran: <strong id="profileStatusDetail">Belum ada</strong></p>
+            <p>Jadwal terpilih: <strong id="selectedSchedule">Belum dipilih</strong></p>
+            <div class="qr-box">QR Code</div>
+          </div>
+          <div class="dashboard-card card">
+            <h3>Countdown Donor</h3>
+            <p id="countdown">Menunggu jadwal</p>
+            <p>Notif: Anda akan menerima konfirmasi 24 jam sebelum acara donor.</p>
+          </div>
+        </div>
+        <div class="dashboard-card card">
+          <h3>Registrasi Anda</h3>
+          <ul id="registrationList" class="list-card"></ul>
+        </div>
+        <div class="dashboard-card card table-card">
+          <h3>Riwayat Donor</h3>
+          <table>
+            <thead><tr><th>Nama</th><th>Gol darah</th><th>Tanggal</th><th>Status</th></tr></thead>
+            <tbody id="historyList"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

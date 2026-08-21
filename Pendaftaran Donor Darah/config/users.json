@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1787020416,
+        "username": "budi_pmi",
+        "email": "budi@gmail.com",
+        "password": "$2y$10$Q1wgMVPsF2XfI0QiZg0IK.E.XWL\/B76Iujlx5lljT4I2rC2RWocA.",
+        "created_at": "2026-08-18 04:33:36",
+        "profile_picture": null
+    },
+    {
+        "id": 1787020445,
+        "username": "budi_test",
+        "email": "budi_test@pmi.org",
+        "password": "$2y$10$kXoIZLPnantGWJsUq3UTTOvZ4.oG6.dgExgOVyCMC29iKF5HHRmOe",
+        "created_at": "2026-08-18 04:34:05",
+        "profile_picture": null
+    },
+    {
+        "id": 1,
+        "username": "devinaja",
+        "email": "devinaghea2023@gmail.com",
+        "password": "$2y$10$b\/\/BM5r4Sn24QYSlybg0EuVTyR0QZbg0Fs0LkK0SYTwygbZBx.K3u",
+        "created_at": "2026-08-18 05:34:20",
+        "profile_picture": null
+    }
+]

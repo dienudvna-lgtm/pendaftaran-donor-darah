@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Peserta - BloodConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="../index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect Admin</a>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <a class="btn btn-secondary" href="../index.html">Kembali</a>
+        </div>
+      </div>
+    </header>
+    <main class="container dashboard-shell">
+      <aside class="sidebar glass">
+        <a href="dashboard.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> Admin</a>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a class="active" href="peserta.html">Peserta</a>
+          <a href="jadwal.html">Jadwal</a>
+          <a href="laporan.html">Laporan</a>
+        </nav>
+      </aside>
+      <section class="dashboard-main">
+        <div class="dashboard-card card table-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+            <h3>Daftar Peserta</h3>
+            <button class="btn btn-primary" onclick="exportToExcel()">Export ke Excel</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Telepon</th>
+                <th>Gol Darah</th>
+                <th>Tanggal Donor</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="participantTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="detailModal">
+      <div class="modal-card">
+        <div id="detailModalContent"></div>
+        <button class="btn btn-primary" id="detailModalClose">Tutup</button>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/panitia.js"></script>
+    <script src="../js/export.js"></script>
+  </body>
+</html>

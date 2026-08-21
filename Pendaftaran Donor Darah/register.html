@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Register - PMI Connect" />
+    <meta name="description" content="Daftar akun PMI Connect untuk mengakses layanan Palang Merah Indonesia" />
+    <title>Register - PMI Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+    <main class="auth-container">
+        <!-- Left Side - Illustrations & Info -->
+        <div class="auth-left">
+            <div class="auth-brand">
+                <a href="home.html"><span class="brand-mark"><i class="fa-solid fa-shield-heart"></i></span></a>
+                <h1>PMI Connect</h1>
+            </div>
+            
+            <div class="auth-illustration">
+                <div class="illustration-wrapper">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Heart shape with plus -->
+                        <path d="M100,170 C50,140 20,110 20,75 C20,55 35,40 50,40 C65,40 80,50 100,65 C120,50 135,40 150,40 C165,40 180,55 180,75 C180,110 150,140 100,170 Z" fill="#c1121f" opacity="0.8"/>
+                        <circle cx="100" cy="80" r="12" fill="white" opacity="0.9"/>
+                        <text x="100" y="88" text-anchor="middle" fill="#c1121f" font-size="16" font-weight="bold">+</text>
+                    </svg>
+                </div>
+                
+                <h2>Bergabunglah dengan Kami!</h2>
+                <p>Daftar sekarang dan jadilah bagian dari gerakan kemanusiaan PMI</p>
+            </div>
+            
+            <div class="auth-features">
+                <div class="feature-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <div>
+                        <h4>Selamatkan Nyawa</h4>
+                        <p>Jadilah pendonor dan selamatkan nyawa</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-people-group"></i>
+                    <div>
+                        <h4>Komunitas Besar</h4>
+                        <p>Bergabung dengan ribuan pendonor sukarela</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-award"></i>
+                    <div>
+                        <h4>Penghargaan</h4>
+                        <p>Dapatkan sertifikat dan apresiasi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Register Form -->
+        <div class="auth-right">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Buat Akun</h2>
+                    <p>Isi form di bawah untuk mendaftar</p>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+                    <!-- Username Field -->
+                    <div class="form-group">
+                        <label for="username">
+                            <i class="fa-solid fa-user"></i> Username
+                        </label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="Minimal 4 karakter"
+                            required
+                        />
+                        <span class="error-message" id="usernameError"></span>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fa-solid fa-envelope"></i> Email
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your@email.com"
+                            required
+                        />
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fa-solid fa-lock"></i> Password
+                        </label>
+                        <div class="password-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Minimal 8 karakter (huruf + angka)"
+                                required
+                            />
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message" id="passwordError"></span>
+                        <div class="password-strength">
+                            <div class="strength-bar" id="strengthBar"></div>
+                            <span class="strength-text" id="strengthText"></span>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="form-group">
+                        <label for="password_confirm">
+                            <i class="fa-solid fa-lock"></i> Konfirmasi Password
+                        </label>
+                        <div class="password-wrapper">
+                            <input 
+                                type="password" 
+                                id="password_confirm" 
+                                name="password_confirm" 
+                                placeholder="Ulangi password Anda"
+                                required
+                            />
+                            <button type="button" class="toggle-password" id="togglePasswordConfirm">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message" id="passwordConfirmError"></span>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="agree_terms" name="agree_terms" />
+                        <label for="agree_terms">
+                            Saya menyetujui syarat dan ketentuan
+                        </label>
+                    </div>
+                    <span class="error-message" id="agreeTermsError"></span>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                        <i class="fa-solid fa-user-plus"></i> Sign Up
+                    </button>
+
+                    <!-- Error Message -->
+                    <div class="alert alert-error" id="generalError" style="display: none;"></div>
+
+                    <!-- Success Message -->
+                    <div class="alert alert-success" id="successMessage" style="display: none;"></div>
+                </form>
+
+                <!-- Divider -->
+                <div class="auth-divider">
+                    <span>Atau</span>
+                </div>
+
+                <!-- Login Link -->
+                <div class="auth-footer">
+                    <p>Sudah memiliki akun? <a href="login.html" class="auth-link">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

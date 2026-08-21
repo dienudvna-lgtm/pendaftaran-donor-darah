@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran Donor - BloodConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect</a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="daftar.html">Register</a>
+          <a href="jadwal.html">Schedule</a>
+          <a href="informasi.html">Information</a>
+          <a href="kontak.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="icon-btn mobile-toggle" aria-label="Toggle nav"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding:40px 0 80px;">
+      <div class="section-title">
+        <h2>Form Pendaftaran Donor</h2>
+        <p>Isi data Anda dengan lengkap untuk memulai proses pendonoran.</p>
+      </div>
+      <div class="card" style="padding:28px;">
+        <form id="registrationForm">
+          <div class="form-grid">
+            <div><label for="full-name">Nama Lengkap</label><input id="full-name" name="full-name" type="text" required /></div>
+            <div><label for="age">Usia</label><input id="age" name="age" type="number" required /></div>
+            <div><label for="gender">Jenis Kelamin</label><select id="gender" name="gender"><option>Laki-laki</option><option>Perempuan</option></select></div>
+            <div><label for="blood-type">Golongan Darah</label><select id="blood-type" name="blood-type" required>
+              <option value="">Pilih golongan darah</option>
+              <option value="Tidak Tahu">Tidak Tahu</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select></div>
+            <div><label for="weight">Berat Badan (kg)</label><input id="weight" name="weight" type="number" required /></div>
+            <div><label for="phone">Nomor Telepon</label><input id="phone" name="phone" type="tel" required /></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+            <div><label for="address">Alamat</label><input id="address" name="address" type="text" required /></div>
+            <div><label for="history">Riwayat Penyakit</label><input id="history" name="history" type="text" required /></div>
+            <div><label for="donation-date">Tanggal Donor</label><select id="donation-date" name="donation-date" required>
+              <option value="">Pilih tanggal</option>
+              <option value="19 Oktober 2026">19 Oktober 2026</option>
+              <option value="24 Oktober 2026">24 Oktober 2026</option>
+              <option value="01 Oktober 2026">01 Oktober 2026</option>
+            </select></div>
+            <div><label for="location">Lokasi Donor</label><select id="location" name="location" required>
+              <option value="">Pilih lokasi</option>
+              <option value="Universitas Indonesia">Universitas Indonesia</option>
+              <option value="RSUD Cibubur">RSUD Cibubur</option>
+              <option value="Gedung Serbaguna PMI">Gedung Serbaguna PMI</option>
+            </select></div>
+          </div>
+          <div class="checkbox-row"><input type="checkbox" id="agreement" required /><label for="agreement">Saya menyetujui syarat dan ketentuan donor darah</label></div>
+          <button class="btn btn-primary" style="margin-top:16px;" type="submit">Submit Pendaftaran</button>
+        </form>
+      </div>
+      <div id="registrationSummary" style="margin-top:24px;"></div>
+    </main>
+
+    <div class="modal" id="successModal">
+      <div class="modal-card" style="text-align:center;">
+        <div style="font-size:48px; color:#10b981; margin-bottom:12px;"><i class="fa-solid fa-circle-check"></i></div>
+        <h2 style="font-size:20px; font-weight:800; color:#065f46; margin-bottom:12px; line-height:1.4;">SELAMAT ANDA TELAH MELAKUKAN PENDAFTARAN DONOR DARAH</h2>
+        <p style="margin-bottom:20px; color:#374151;">Data pendaftaran Anda telah berhasil diterima dan dikirimkan ke panitia PMI.</p>
+        <button class="btn btn-primary" id="closeModal">Tutup</button>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      requireUserAuth();
+    </script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

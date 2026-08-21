@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Profile - PMI Connect" />
+    <meta name="description" content="Halaman profil pengguna PMI Connect yang menampilkan informasi akun dan kontak pribadi." />
+    <title>Profile - PMI Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="home.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-shield-heart"></i></span> PMI Connect</a>
+        <nav class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about-pmi.html">About</a>
+          <a href="event.html">Event</a>
+          <a href="saran.html">Saran</a>
+          <a href="contact.html">Kontak</a>
+          <a class="active" href="profile.html">Profile</a>
+          <a href="#" class="logout-link">Logout</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="icon-btn mobile-toggle" aria-label="Toggle nav"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding:40px 0 80px;">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Profile Anda</h2>
+        <p>Informasi akun pengguna PMI Connect, kontak, dan data pribadi.</p>
+      </div>
+      <div class="info-grid">
+        <article class="card info-card" data-aos="fade-up">
+          <div class="icon-wrap"><i class="fa-solid fa-user-circle"></i></div>
+          <h3>Foto Profil</h3>
+          <p><span class="chip" style="display:inline-flex;">Belum ada foto</span></p>
+        </article>
+        <article class="card info-card" data-aos="fade-up" data-aos-delay="80">
+          <h3>Detail Akun</h3>
+          <p>Nama: <strong id="profileName">Relawan</strong></p>
+          <p>Email: <strong id="profileEmail">user@example.com</strong></p>
+          <p>Nomor HP: <strong id="profilePhone">Belum ditambahkan</strong></p>
+        </article>
+      </div>
+      <div class="card" data-aos="fade-up" style="padding:32px; max-width:720px; margin:32px auto 0;">
+        <h3>Edit Profile</h3>
+        <form id="profileForm">
+          <div class="form-grid">
+            <div><label for="inputName">Nama</label><input id="inputName" type="text" required /></div>
+            <div><label for="inputEmail">Email</label><input id="inputEmail" type="email" required /></div>
+            <div><label for="inputPhone">Nomor HP</label><input id="inputPhone" type="tel" /></div>
+          </div>
+          <button class="btn btn-primary" id="saveProfileButton" type="submit">Edit Profile</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/pmi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      requireUserAuth();
+      AOS.init({ duration: 800, once: true, offset: 80 });
+    </script>
+  </body>
+</html>

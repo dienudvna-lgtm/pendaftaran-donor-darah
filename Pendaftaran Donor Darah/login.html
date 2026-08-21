@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Login - PMI Connect" />
+    <meta name="description" content="Masuk ke akun PMI Connect Anda" />
+    <title>Login - PMI Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+    <main class="auth-container">
+        <!-- Left Side - Illustrations & Info -->
+        <div class="auth-left">
+            <div class="auth-brand">
+                <a href="home.html"><span class="brand-mark"><i class="fa-solid fa-shield-heart"></i></span></a>
+                <h1>PMI Connect</h1>
+            </div>
+            
+            <div class="auth-illustration">
+                <div class="illustration-wrapper">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Heart shape -->
+                        <path d="M100,170 C50,140 20,110 20,75 C20,55 35,40 50,40 C65,40 80,50 100,65 C120,50 135,40 150,40 C165,40 180,55 180,75 C180,110 150,140 100,170 Z" fill="#c1121f" opacity="0.8"/>
+                        <circle cx="100" cy="80" r="8" fill="white" opacity="0.9"/>
+                        <circle cx="85" cy="95" r="6" fill="white" opacity="0.7"/>
+                        <circle cx="115" cy="95" r="6" fill="white" opacity="0.7"/>
+                    </svg>
+                </div>
+                
+                <h2>Selamat Datang Kembali!</h2>
+                <p>Masuk ke akun Anda untuk mengakses layanan PMI Connect</p>
+            </div>
+            
+            <div class="auth-features">
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-check"></i>
+                    <div>
+                        <h4>Aman</h4>
+                        <p>Data terenkripsi dengan teknologi terkini</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Akses Anytime</h4>
+                        <p>Akses akun kapan saja dari mana saja</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-bell"></i>
+                    <div>
+                        <h4>Notifikasi</h4>
+                        <p>Dapatkan update terkini dari PMI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="auth-right">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Masuk</h2>
+                    <p>Gunakan email dan password Anda</p>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fa-solid fa-envelope"></i> Email
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your@email.com"
+                            required
+                        />
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fa-solid fa-lock"></i> Password
+                        </label>
+                        <div class="password-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Masukkan password"
+                                required
+                            />
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <!-- Remember Me Checkbox -->
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="rememberMe" name="rememberMe" />
+                        <label for="rememberMe">Ingat saya</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                        <i class="fa-solid fa-right-to-bracket"></i> Masuk
+                    </button>
+
+                    <!-- Error Message -->
+                    <div class="alert alert-error" id="generalError" style="display: none;"></div>
+
+                    <!-- Success Message -->
+                    <div class="alert alert-success" id="successMessage" style="display: none;"></div>
+                </form>
+
+                <!-- Divider -->
+                <div class="auth-divider">
+                    <span>Atau</span>
+                </div>
+
+                <!-- Sign Up Link -->
+                <div class="auth-footer">
+                    <p>Belum memiliki akun? <a href="register.html" class="auth-link">Sign Up</a></p>
+                </div>
+
+                <!-- Panitia Login Link -->
+                <div class="auth-panitia-link">
+                    <a href="admin/login.html" class="auth-link"><i class="fa-solid fa-user-shield"></i> Login sebagai Panitia</a>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="auth-info">
+                <i class="fa-solid fa-heart"></i>
+                <p>Bergabunglah dengan ribuan pendonor yang telah menyelamatkan nyawa</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

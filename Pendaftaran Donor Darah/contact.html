@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Kontak PMI Connect" />
+    <meta name="description" content="Informasi kontak resmi PMI Connect termasuk alamat, email, telepon, jam operasional, dan sosial media." />
+    <title>Kontak - PMI Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="home.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-shield-heart"></i></span> PMI Connect</a>
+        <nav class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about-pmi.html">About</a>
+          <a href="event.html">Event</a>
+          <a href="saran.html">Saran</a>
+          <a class="active" href="contact.html">Kontak</a>
+          <a href="profile.html">Profile</a>
+          <a href="#" class="logout-link">Logout</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="icon-btn mobile-toggle" aria-label="Toggle nav"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding:40px 0 80px;">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Kontak PMI Connect</h2>
+        <p>Hubungi kami untuk informasi kegiatan PMI dan layanan kemanusiaan.</p>
+      </div>
+      <div class="info-grid">
+        <article class="card contact-card" data-aos="fade-up">
+          <h3>Alamat PMI</h3>
+          <p>Jl. Merdeka No. 17, Gambir, Jakarta Pusat</p>
+          <p>Email: <strong>info@pmiconnect.id</strong></p>
+          <p>Telepon: <strong>+62 21 555 1234</strong></p>
+          <p>Jam Operasional: Senin - Jumat, 08.00 - 17.00</p>
+        </article>
+        <article class="card contact-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Media Sosial</h3>
+          <ul class="list-check">
+            <li><i class="fa-brands fa-facebook"></i> facebook.com/pmiconnect</li>
+            <li><i class="fa-brands fa-instagram"></i> instagram.com/pmiconnect</li>
+            <li><i class="fa-brands fa-twitter"></i> twitter.com/pmiconnect</li>
+            <li><i class="fa-brands fa-youtube"></i> youtube.com/pmiconnect</li>
+          </ul>
+        </article>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200" style="margin-top:32px; padding:28px;">
+        <h3>Lokasi Kami</h3>
+        <iframe title="Peta PMI Connect" src="https://www.google.com/maps?q=Jakarta&output=embed" style="border:0;width:100%;min-height:320px;border-radius:20px;"></iframe>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/pmi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      requireUserAuth();
+      AOS.init({ duration: 800, once: true, offset: 80 });
+    </script>
+  </body>
+</html>

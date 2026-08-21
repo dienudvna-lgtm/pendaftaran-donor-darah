@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Laporan - BloodConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="../index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect Admin</a>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <a class="btn btn-secondary" href="../index.html">Kembali</a>
+        </div>
+      </div>
+    </header>
+    <main class="container dashboard-shell">
+      <aside class="sidebar glass">
+        <a href="dashboard.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> Admin</a>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="peserta.html">Peserta</a>
+          <a href="jadwal.html">Jadwal</a>
+          <a class="active" href="laporan.html">Laporan</a>
+        </nav>
+      </aside>
+      <section class="dashboard-main">
+        <div class="dashboard-card card">
+          <h3>Laporan Ringkas</h3>
+          <p>Jumlah pendaftar bulan ini: 42</p>
+          <p>Target donor: 120</p>
+          <p>Persentase ketercapaian: 35%</p>
+        </div>
+      </section>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

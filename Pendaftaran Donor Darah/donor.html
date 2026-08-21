@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="BloodConnect - Setetes Darah, Sejuta Harapan" />
+    <meta name="description" content="Platform pendaftaran donor darah online untuk mahasiswa, universitas, perusahaan, organisasi, dan masyarakat umum." />
+    <meta property="og:title" content="BloodConnect" />
+    <meta property="og:description" content="Daftar donor darah secara online dengan mudah dan aman." />
+    <meta property="og:type" content="website" />
+    <title>BloodConnect - Setetes Darah, Sejuta Harapan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="loading-screen"><div class="loading-ring"></div></div>
+    <div class="scroll-progress"></div>
+    <div class="topbar">
+      <div class="container" style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;">
+        <span><i class="fa-solid fa-heart-pulse"></i> Donor darah aman, cepat, dan terdaftar</span>
+        <span><i class="fa-solid fa-phone"></i> +62 889-8073-6515</span>
+      </div>
+    </div>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="donor.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect</a>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="daftar.html">Register</a>
+          <a href="jadwal.html">Schedule</a>
+          <a href="informasi.html">Information</a>
+          <a href="kontak.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="icon-btn mobile-toggle" aria-label="Toggle nav"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div data-aos="fade-right">
+            <h1>Setetes Darah, Sejuta Harapan</h1>
+            <p>Bergabunglah menjadi pendonor darah dan bantu menyelamatkan nyawa melalui proses pendaftaran yang mudah, cepat, dan aman.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="daftar.html"><i class="fa-solid fa-user-plus"></i> Daftar Sekarang</a>
+              <a class="btn btn-outline" href="jadwal.html"><i class="fa-solid fa-calendar-days"></i> Lihat Jadwal</a>
+            </div>
+            <div class="hero-badges">
+              <span class="badge"><i class="fa-solid fa-shield-heart"></i> Aman & Terverifikasi</span>
+              <span class="badge"><i class="fa-solid fa-clock"></i> Proses 10 Menit</span>
+            </div>
+            <div class="heartbeat"><i class="fa-solid fa-heart-pulse"></i> 1 donor dapat membantu 3 pasien</div>
+          </div>
+          <div class="hero-visual" data-aos="fade-left">
+            <div class="glass">
+              <div class="blood-drop">
+                <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100 20c-32 40-70 86-70 118a70 70 0 1 0 140 0c0-32-38-78-70-118z" fill="#c1121f" opacity="0.9" />
+                </svg>
+              </div>
+              <div class="floating-drop one">🩸</div>
+              <div class="floating-drop two">🩸</div>
+              <div class="stats-grid">
+                <div class="stat-card"><strong data-counter="1200">0</strong><span>Donor Aktif</span></div>
+                <div class="stat-card"><strong data-counter="320">0</strong><span>Event Bulan Ini</span></div>
+                <div class="stat-card"><strong data-counter="980">0</strong><span>Pasien Terbantu</span></div>
+                <div class="stat-card"><strong data-counter="99">0</strong><span>Persentase Aman</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Tentang BloodConnect</h2>
+          <p>BloodConnect hadir untuk memudahkan siapa saja mendaftar donor darah secara online, melihat jadwal, dan mengikuti informasi penting terkait donor darah.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card step-card" data-aos="fade-up">
+            <div class="icon-wrap"><i class="fa-solid fa-mobile-screen"></i></div>
+            <h3>Online & Praktis</h3>
+            <p>Daftar donor dari mana saja tanpa antre panjang dan tanpa hambatan administratif.</p>
+          </article>
+          <article class="card step-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Transparan</h3>
+            <p>Setiap pendaftaran tersimpan aman dan dapat dipantau dari dashboard pengguna.</p>
+          </article>
+          <article class="card step-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-wrap"><i class="fa-solid fa-hands-helping"></i></div>
+            <h3>Berbasis Komunitas</h3>
+            <p>Terhubung dengan sekolah, kampus, perusahaan, organisasi, dan masyarakat luas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Mengapa Donor Darah?</h2>
+          <p>Setiap setetes darah Anda dapat menjadi harapan bagi mereka yang membutuhkan.</p>
+        </div>
+        <div class="benefits-grid">
+          <article class="card benefit-card" data-aos="fade-up">
+            <h3>Skema Kesehatan</h3>
+            <p>Gratis pemeriksaan kesehatan dasar sebelum donor.</p>
+          </article>
+          <article class="card benefit-card" data-aos="fade-up" data-aos-delay="80">
+            <h3>Kenal Komunitas</h3>
+            <p>Bangun rasa solidaritas melalui aksi sosial yang bermakna.</p>
+          </article>
+          <article class="card benefit-card" data-aos="fade-up" data-aos-delay="160">
+            <h3>Sertifikat</h3>
+            <p>Dapatkan sertifikat donor sebagai bukti kontribusi Anda.</p>
+          </article>
+          <article class="card benefit-card" data-aos="fade-up" data-aos-delay="240">
+            <h3>Selamatkan Nyawa</h3>
+            <p>Donor darah Anda membantu pasien operasi, kecelakaan, dan penyakit serius.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Proses Pendaftaran</h2>
+          <p>Langkah singkat yang aman dan jelas untuk memulai perjalanan donor Anda.</p>
+        </div>
+        <div class="timeline">
+          <div class="card step-card" data-aos="fade-right">
+            <div class="timeline-item"><div class="timeline-number">1</div><div><h3>Isi formulir</h3><p>Masukkan data Anda dan pilih tanggal preferensi donor.</p></div></div>
+          </div>
+          <div class="card step-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="timeline-item"><div class="timeline-number">2</div><div><h3>Tunggu konfirmasi</h3><p>Tim kami akan meninjau data Anda dan mengonfirmasi jadwal yang tersedia.</p></div></div>
+          </div>
+          <div class="card step-card" data-aos="fade-right" data-aos-delay="200">
+            <div class="timeline-item"><div class="timeline-number">3</div><div><h3>Datang donor</h3><p>Hadiri acara donor dan ikuti prosedur yang telah ditentukan oleh petugas.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Jadwal Donor Mendatang</h2>
+          <p>Temukan acara donor yang paling dekat dengan lokasi Anda.</p>
+        </div>
+        <div class="schedule-grid">
+          <article class="card schedule-card" data-aos="fade-up">
+            <h3>19 Oktober 2026</h3>
+            <p>Senin • 09.00 - 12.00</p>
+            <p>Universitas Indonesia</p>
+            <p>Kuota: 40 • Sisa 18</p>
+            <span class="chip">Tersedia</span>
+            <p class="muted" data-countdown="2026-08-19T09:00:00"></p>
+            <a class="btn btn-primary" href="daftar.html">Register</a>
+          </article>
+          <article class="card schedule-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>24 Oktober 2026</h3>
+            <p>Sabtu • 13.00 - 16.00</p>
+            <p>RSUD Cibubur</p>
+            <p>Kuota: 35 • Sisa 12</p>
+            <span class="chip">Tersedia</span>
+            <p class="muted" data-countdown="2026-08-24T13:00:00"></p>
+            <a class="btn btn-primary" href="daftar.html">Register</a>
+          </article>
+          <article class="card schedule-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>01 Oktober 2026</h3>
+            <p>Senin • 08.00 - 11.00</p>
+            <p>Gedung Serbaguna PMI</p>
+            <p>Kuota: 50 • Sisa 27</p>
+            <span class="chip">Tersedia</span>
+            <p class="muted" data-countdown="2026-09-01T08:00:00"></p>
+            <a class="btn btn-primary" href="daftar.html">Register</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Manfaat Donor Darah</h2>
+          <p>Selain membantu sesama, donor darah juga membawa manfaat nyata bagi kesehatan Anda.</p>
+        </div>
+        <div class="benefits-grid">
+          <article class="card benefit-card" data-aos="fade-up"><h3>Screening Kesehatan</h3><p>Gratis pemeriksaan tekanan darah dan hemoglobin.</p></article>
+          <article class="card benefit-card" data-aos="fade-up" data-aos-delay="80"><h3>Snack Sehat</h3><p>Dapatkan makanan ringan dan minuman sehat setelah donor.</p></article>
+          <article class="card benefit-card" data-aos="fade-up" data-aos-delay="160"><h3>Sertifikat</h3><p>Mendapatkan sertifikat sebagai penghargaan kontribusi.</p></article>
+          <article class="card benefit-card" data-aos="fade-up" data-aos-delay="240"><h3>Pengalaman Layanan</h3><p>Merasakan pengalaman sosial yang menginspirasi dan penuh makna.</p></article>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Informasi Donor</h2>
+          <p>Kenali syarat, persiapan, dan hal yang perlu diperhatikan sebelum dan setelah donor.</p>
+        </div>
+        <div class="info-grid">
+          <article class="card info-card" data-aos="fade-up">
+            <h3>Persyaratan Sebelum Donor</h3>
+            <ul class="list-check">
+              <li>Usia 17-65 tahun</li>
+              <li>Berat badan minimal 45 kg</li>
+              <li>Sehat dan tidak sedang sakit</li>
+              <li>Istirahat cukup sebelum donor</li>
+            </ul>
+          </article>
+          <article class="card info-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Hal yang Perlu Dihindari</h3>
+            <ul class="list-check">
+              <li>Minum alkohol 24 jam sebelumnya</li>
+              <li>Merokok sebelum donor</li>
+              <li>Olahraga berat</li>
+              <li>Bekerja terlalu keras setelah donor</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Statistik BloodConnect</h2>
+          <p>Angka yang menggambarkan dampak nyata dari gerakan donor darah kami.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="card stat-card" data-aos="fade-up"><strong data-counter="5000">0</strong><span>Partisipan</span></div>
+          <div class="card stat-card" data-aos="fade-up" data-aos-delay="80"><strong data-counter="280">0</strong><span>Acara</span></div>
+          <div class="card stat-card" data-aos="fade-up" data-aos-delay="160"><strong data-counter="15000">0</strong><span>Unit Darah</span></div>
+          <div class="card stat-card" data-aos="fade-up" data-aos-delay="240"><strong data-counter="98">0</strong><span>Persentase Kepuasan</span></div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Testimoni Pendonor</h2>
+          <p>Pengalaman mereka setelah menjadi bagian dari gerakan donor darah.</p>
+        </div>
+        <div class="testimonial-grid">
+          <article class="card testimonial-card" data-aos="fade-up">
+            <p>“Sangat mudah dan cepat. Saya bisa mendaftar dari ponsel saja.”</p>
+            <strong>Rina, Mahasiswa</strong>
+          </article>
+          <article class="card testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <p>“Saya merasa bangga bisa membantu banyak orang melalui donor darah.”</p>
+            <strong>Andi, Karyawan</strong>
+          </article>
+          <article class="card testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <p>“Antarmuka yang modern dan informasi yang jelas membuat saya nyaman.”</p>
+            <strong>Dewi, Relawan</strong>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 80 });
+    </script>
+  </body>
+</html>

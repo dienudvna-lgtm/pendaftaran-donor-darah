@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Panitia - BloodConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="admin-login-page">
+    <div class="auth-page">
+      <div class="auth-card">
+        <a href="../index.html" class="brand" style="margin-bottom:16px;display:inline-flex;"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect</a>
+        <h1>Login Panitia</h1>
+        <p>Masuk sebagai panitia untuk melihat dan mengelola pendaftar donor.</p>
+        <form class="auth-form" id="adminLoginForm">
+          <div class="form-group">
+            <label for="adminUser">Username</label>
+            <input id="adminUser" type="text" placeholder="Masukkan username panitia" required />
+          </div>
+          <div class="form-group">
+            <label for="adminPass">Password</label>
+            <input id="adminPass" type="password" placeholder="Password panitia" required />
+          </div>
+          <p id="adminLoginError" class="muted" style="margin-bottom:12px;"></p>
+          <button class="btn btn-primary" style="width:100%;margin-top:12px;" type="submit">Login Panitia</button>
+        </form>
+        <p class="auth-alt"><a href="../login.html">Kembali ke login pengguna</a></p>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.dashboard-shell { display: grid; grid-template-columns: 280px 1fr; gap: 24px; padding: 32px 0 70px; }
+.sidebar { border-radius: 24px; padding: 22px; height: fit-content; position: sticky; top: 90px; }
+.sidebar .brand { margin-bottom: 20px; }
+.sidebar nav { display: grid; gap: 10px; }
+.sidebar nav a { padding: 10px 12px; border-radius: 12px; color: var(--text); font-weight: 500; }
+.sidebar nav a.active, .sidebar nav a:hover { background: rgba(193,18,31,0.08); color: var(--primary); }
+.dashboard-main { display: grid; gap: 20px; }
+.dashboard-card { padding: 22px; border-radius: 24px; }
+.profile-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; background: rgba(193,18,31,0.08); color: var(--primary); font-weight: 600; }
+.list-card ul { list-style: none; display: grid; gap: 10px; }
+.qr-box { width: 180px; height: 180px; margin-top: 12px; border-radius: 20px; background: linear-gradient(135deg, rgba(193,18,31,0.08), rgba(255,107,107,0.16)); display: grid; place-items: center; font-weight: 700; color: var(--primary); }
+.table-card table { width: 100%; border-collapse: collapse; }
+.table-card th, .table-card td { text-align: left; padding: 12px 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.admin-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.admin-stat { padding: 18px; border-radius: 20px; background: white; }
+.admin-chart { height: 260px; }

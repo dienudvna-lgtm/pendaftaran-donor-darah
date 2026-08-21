@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - BloodConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-shell">
+        <a href="../index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> BloodConnect Admin</a>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+          <a class="btn btn-secondary" href="../index.html">Kembali</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container dashboard-shell">
+      <aside class="sidebar glass">
+        <a href="dashboard.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-droplet"></i></span> Admin</a>
+        <nav>
+          <a class="active" href="dashboard.html">Dashboard</a>
+          <a href="peserta.html">Peserta</a>
+          <a href="jadwal.html">Jadwal</a>
+          <a href="laporan.html">Laporan</a>
+        </nav>
+      </aside>
+      <section class="dashboard-main">
+        <div class="admin-stats">
+          <div class="admin-stat card"><h3>Peserta</h3><p>124</p></div>
+          <div class="admin-stat card"><h3>Jadwal</h3><p>8</p></div>
+          <div class="admin-stat card"><h3>Konfirmasi</h3><p>96</p></div>
+          <div class="admin-stat card"><h3>Pending</h3><p>28</p></div>
+        </div>
+        <div class="dashboard-card card">
+          <h3>Registrasi Terbaru</h3>
+          <ul id="registrationList" class="list-card"></ul>
+        </div>
+        <div class="dashboard-card card">
+          <h3>Grafik Donor</h3>
+          <div class="admin-chart">
+            <canvas id="chart" width="400" height="220"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/panitia.js"></script>
+    <script>
+      const ctx = document.getElementById('chart');
+      if (ctx) {
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['Jan','Feb','Mar','Apr','Mei','Jun'],
+            datasets:[{label:'Donor', data:[40,60,80,55,90,110], borderColor:'#c1121f', fill:false, tension:.3}]
+          },
+          options:{responsive:true, plugins:{legend:{display:false}}}
+        });
+      }
+      const regs = JSON.parse(localStorage.getItem('bloodconnect-registrations') || '[]');
+      document.getElementById('registrationList').innerHTML = regs.slice(0, 5).map((item) => `<li><strong>${item['full-name']}</strong> — ${item.location} • ${item['donation-date']}</li>`).join('');
+    </script>
+  </body>
+</html>
