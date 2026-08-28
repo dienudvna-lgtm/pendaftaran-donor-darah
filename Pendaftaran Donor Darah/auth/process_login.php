@@ -6,6 +6,7 @@
 
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/middleware.php';
+require_once __DIR__ . '/../includes/logger.php';
 
 $response = [
     'success' => false,
@@ -40,9 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Verify password using password_verify() against hashed password
                 if (!password_verify($password, $user['password'])) {
                     $response['errors']['password'] = 'Password yang Anda masukkan salah.';
+                    write_log("Login gagal (password salah): " . $email, 'WARNING');
                 } else {
                     // Password correct -> Set PHP Session
                     setUserSession($user['id'], $user['email'], $user['username']);
+                    write_log("Login berhasil: " . $email, 'INFO');
                     
                     // Log login activity if database is active
                     global $conn;

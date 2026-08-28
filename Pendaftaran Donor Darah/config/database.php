@@ -5,11 +5,14 @@
  * Type: MySQL/MariaDB
  */
 
-if (!defined('DB_HOST')) define('DB_HOST', 'localhost');
-if (!defined('DB_USER')) define('DB_USER', 'root');
-if (!defined('DB_PASS')) define('DB_PASS', '');
-if (!defined('DB_NAME')) define('DB_NAME', 'pmi_connect');
-if (!defined('DB_CHARSET')) define('DB_CHARSET', 'utf8mb4');
+require_once __DIR__ . '/env_loader.php';
+loadEnv(__DIR__ . '/../.env');
+
+if (!defined('DB_HOST')) define('DB_HOST', $_ENV['DB_HOST'] ?? 'localhost');
+if (!defined('DB_USER')) define('DB_USER', $_ENV['DB_USER'] ?? 'root');
+if (!defined('DB_PASS')) define('DB_PASS', $_ENV['DB_PASS'] ?? '');
+if (!defined('DB_NAME')) define('DB_NAME', $_ENV['DB_NAME'] ?? 'pmi_connect');
+if (!defined('DB_CHARSET')) define('DB_CHARSET', $_ENV['DB_CHARSET'] ?? 'utf8mb4');
 
 // Session Configuration
 if (session_status() === PHP_SESSION_NONE) {

@@ -115,16 +115,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const confirmed = confirm(`Are you sure you want to ${action} this registration?`);
     if (!confirmed) return;
 
-    if (action === 'approve') {
-      const emailSent = await sendApprovalEmail(registration);
-      if (!emailSent) return;
+        if (action === 'approve') {
       registrations[index].status = 'Approved';
       saveRegistrations(registrations);
       renderTable();
-      showToast('Approval email has been sent successfully.');
+      const emailSent = await sendApprovalEmail(registration);
+      if (emailSent) {
+        showToast('Approval email has been sent successfully.');
+      } else {
+        showToast('Peserta berhasil di-approve. (Catatan: email notifikasi gagal terkirim, cek konfigurasi SMTP)');
+      }
       return;
     }
-
+    
     if (action === 'reject') {
       registrations.splice(index, 1);
       saveRegistrations(registrations);
