@@ -1,0 +1,12 @@
+# Environment config (data sensitif database)
+.env
+
+# Log aktivitas
+logs/*.log
+
+# Hasil backup database
+backups/*.sql
+
+# Vendor/dependency (kalau nanti pakai composer)
+/vendor
+config.php
