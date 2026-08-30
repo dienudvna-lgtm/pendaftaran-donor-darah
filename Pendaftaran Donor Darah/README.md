@@ -28,8 +28,8 @@ serta melihat laporan melalui dashboard khusus panitia.
 
 ## Screenshot
 
-![Halaman Login](./screenshots/login.png)
-![Dashboard Panitia](./screenshots/dashboard-panitia.png)
+![Halaman Login](./screenshots/login.jpg)
+![Dashboard Panitia](./screenshots/dashboard-panitia.jpg)
 
 ## Cara Menjalankan
 
