@@ -2,9 +2,7 @@
 -- Database: pmi_connect
 -- Type: MySQL/MariaDB
 
--- Create Database
-CREATE DATABASE IF NOT EXISTS `pmi_connect` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `pmi_connect`;
+
 
 -- Create Users Table
 CREATE TABLE IF NOT EXISTS `users` (
