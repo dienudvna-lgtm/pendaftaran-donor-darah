@@ -49,9 +49,10 @@ php -S localhost:8000
 
 ## Demo Live
 
-[Coba aplikasi di sini](https://observing-crested-husband.ngrok-free.dev/login.html)
+[http://bloodconnectpmi.free.nf/login.html]
 
-> Catatan: aplikasi dideploy di server Debian 13, diakses melalui ngrok
+> Catatan: aplikasi dideploy menggunakan layanan hosting InfinityFree,
+> dapat diakses kapan saja tanpa perlu perangkat pengembang menyala.
 
 ## Portofolio Lengkap
 
