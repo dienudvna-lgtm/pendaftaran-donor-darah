@@ -49,7 +49,7 @@ php -S localhost:8000
 
 ## Demo Live
 
-[http://bloodconnectpmi.free.nf/login.html]
+[Coba aplikasi di sini](https://bloodconnectpmi.free.nf/login.html)
 
 > Catatan: aplikasi dideploy menggunakan layanan hosting InfinityFree,
 > dapat diakses kapan saja tanpa perlu perangkat pengembang menyala.
